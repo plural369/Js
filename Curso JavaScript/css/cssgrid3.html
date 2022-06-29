@@ -19,16 +19,20 @@
         main{
             grid-area: conteudo;
         }
+        div{
+            grid-area: div;
+        }
         footer{
             grid-area: rodape;
         }
         body{
             display: grid;
             min-height: 100vh;
-            grid-template-columns: 300px 1fr;
-            grid-template-rows: 100px 1fr 100px;
+            grid-template-columns: 400px 1fr;
+            grid-template-rows: 100px 1000px 2500px 300px;
             grid-template-areas: 'cabecalho cabecalho'
             'navegacao conteudo'
+            'div div'
             'rodape rodape';
         }
         @media(max-width: 700px){
@@ -44,6 +48,16 @@
 <body>
     <main class="tag">CONTEÚDO</main>
     <header class="tag">CABEÇALHO</header>
+    <div class="tag">DIV
+        <a href=""></a>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus dignissimos labore libero laboriosam aut dolores, vitae itaque temporibus perferendis, suscipit similique unde minima corrupti fuga quaerat quibusdam mollitia architecto.</p>
+        <ul style="list-style: none;">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
     <footer class="tag">RODAPÉ</footer>
     <nav class="tag">NAVEGAÇÃO</nav>
 
