@@ -1,0 +1,15 @@
+Configurando o banco.
+
+1 - Instalar as Dependencias do (pg, pg-hstore , sequelize e sequelize-cli)
+2 - Crias as constantes no .env
+#Banco de dados
+DIALECT = postgres
+HOST = localhost
+USER_NAME = postgres
+PASSWORD = 1234
+DATABASE = gestao-service
+PORT = 5432
+
+3 - criar configuração do sequelize na pasta config, criando um arquivo database
+
+4 - criar o arquivo . sequelize na raiz do projeto
