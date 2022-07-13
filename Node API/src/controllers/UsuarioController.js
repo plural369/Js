@@ -1,5 +1,6 @@
 const usuarioService = require('../services/usuarioService');
 const {NaoAutorizadoErro} = require('../erros/typeErros');
+
 class UsuarioController{
     async login(req, res){
         const {email, senha} = req.body;
@@ -9,11 +10,12 @@ class UsuarioController{
                 throw new NaoAutorizadoErro(401, 'Usuario ou senha inválidos')
             }
 
-            let credencial = await usuarioService.validarUsuario(email, senha);
+            let credencial = await usuarioService.autenticacao(email, senha)
+            return res.json(credencial);
         }
         catch (error)
         {
-
+            console.log(error)
         }
     }
     obter(req, res){
