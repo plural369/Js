@@ -20,6 +20,10 @@ async function autenticacao(email, senha){
     
 }
 
+async function logout(token){
+    usuarioCache.removerNoCache(token);
+}
+
 function _criarCredencial(usuario){
 
     let dataExpiracao = geradorToken.gerarDataExpiracao()
@@ -38,11 +42,12 @@ function _criarCredencial(usuario){
     let token = geradorToken.criarToken(usuario);
     usuario.senha = undefined;
 
-    credencial = {token, usuario, dataExpiracao}
+    credencial = {token, usuario, dataExpiracao};
     usuarioCache.adicionarNoCache(credencial);
     return credencial;
 }
 
 module.exports = {
-    autenticacao
+    autenticacao,
+    logout
 }

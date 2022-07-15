@@ -14,7 +14,7 @@ const ModeloInvalidoErro = class ModeloInvalidoErro {
     }
 }
 
-const NãoAutorizadoErro = class NãoAutorizadoErro {
+const NaoAutorizadoErro = class NaoAutorizadoErro {
 
     /**
      * Classe utilizada para exceções de acessos ou recursos não autorizados
@@ -30,7 +30,7 @@ const NãoAutorizadoErro = class NãoAutorizadoErro {
     }
 }
 
-const NãoEncontradoErro = class NãoEncontradoErro {
+const NaoEncontradoErro = class NaoEncontradoErro {
 
     /**
      * Classe utilizada para exceções de objetos ou recursos não encontrados
@@ -64,7 +64,7 @@ const AplicacaoErro = class AplicacaoErro {
 
 module.exports = {
     ModeloInvalidoErro,
-    NãoAutorizadoErro,
-    NãoEncontradoErro,
+    NaoAutorizadoErro,
+    NaoEncontradoErro,
     AplicacaoErro
 }
