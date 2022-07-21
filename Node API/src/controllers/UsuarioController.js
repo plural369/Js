@@ -21,7 +21,7 @@ class UsuarioController{
 
     async logout(req, res){
         try {
-            await usuarioService.logout(req.headers.autorization);
+            await usuarioService.logout(req.headers.authorization);
         } catch (error) {
             console.log(error);
             return res.status(error.status).json(error);

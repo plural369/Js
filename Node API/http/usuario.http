@@ -1,7 +1,10 @@
-POST HTTP://localhost:3000/usuarios
+POST HTTP://localhost:3000/login
 Content-Type: application/json
 
 {
     "email": "fulano@gmail.com",
     "senha": "123456"
 }
+###
+DELETE HTTP://localhost:3000/logout
+Authorization: 07b5db3d8eb531237709ac967a39ae8b;

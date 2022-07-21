@@ -16,7 +16,7 @@ function criarToken(usuario){
 
 function gerarDataExpiracao(){
     let data = new Date()
-    let duracao = process.env.DURACAO_TOKEN + 60000;
+    let duracao = process.env.DURACAO_TOKEN * 60000;
     let dataExpiracao = new Date(data.getTime() + duracao)
 
     return dataExpiracao;

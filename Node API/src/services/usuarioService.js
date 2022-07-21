@@ -26,7 +26,7 @@ async function logout(token){
 
 function _criarCredencial(usuario){
 
-    let dataExpiracao = geradorToken.gerarDataExpiracao()
+    let dataExpiracao = geradorToken.gerarDataExpiracao();
 
     let credencial = usuarioCache.obterCredencial(usuario);
 
